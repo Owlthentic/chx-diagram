@@ -1,0 +1,243 @@
+{
+  "calc_range": {
+    "x": [0, 20],
+    "t": [-20, 52]
+  },
+  "figure_settings": {
+    "x": [-0.2, 20.2],
+    "t": [-21.8, 52],
+    "width": 600,
+    "height": 800
+  },
+  "lines": {
+    "enthalpy": {
+      "main": {
+        "calculation": {
+          "step": 5,
+          "offset": 0
+        },
+        "overflow": 0.2,
+        "line_type": "main_enthalpy",
+        "overflow_type": "main_enthalpy"
+      },
+      "secondary": {
+        "calculation": {
+          "step": 1,
+          "offset": 0
+        },
+        "overflow": 0.2,
+        "line_type": "secondary_enthalpy",
+        "overflow_type": "secondary_enthalpy_overflow"
+      }
+    },
+    "temperature": {
+      "main": {
+        "calculation": {
+          "step": 5,
+          "offset": 0
+        },
+        "overflow": 0.2,
+        "line_type": "main_temperature",
+        "overflow_type": "main_temperature"
+      },
+      "secondary": {
+        "calculation": {
+          "step": 1,
+          "offset": 0
+        },
+        "overflow": 0.2,
+        "line_type": "secondary_temperature",
+        "overflow_type": "secondary_temperature"
+      }
+    },
+    "rel_humidity": {
+      "main": {
+        "calculation": {
+          "values": [
+            50,
+            100
+          ]
+        },
+        "line_range": [
+          null,
+          null
+        ],
+        "resolution": 0.2,
+        "line_type": "main_rel_humidity",
+        "overflow_type": "invisible"
+      },
+      "secondary": {
+        "calculation": {
+          "values": [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90
+          ]
+        },
+        "line_range": [
+          null,
+          null
+        ],
+        "resolution": 0.2,
+        "line_type": "secondary_rel_humidity",
+        "overflow_type": "invisible"
+      },
+      "tertiary": {
+        "calculation": {
+          "values": [
+            5,
+            15,
+            25,
+            35,
+            45
+          ]
+        },
+        "line_range": [
+          0,
+          null
+        ],
+        "resolution": 0.2,
+        "line_type": "tertiary_rel_humidity",
+        "overflow_type": "invisible"
+      }
+    },
+    "abs_humidity": {
+      "main": {
+        "calculation": {
+          "step": 1,
+          "offset": 0
+        },
+        "overflow": 1,
+        "line_type": "main_enthalpy",
+        "overflow_type": "main_enthalpy"
+      },
+      "secondary": {
+        "calculation": {
+          "step": 0.5,
+          "offset": 0
+        },
+        "overflow": 0.8,
+        "line_type": "secondary_enthalpy",
+        "overflow_type": "secondary_enthalpy_overflow"
+      },
+      "tertiary": {
+        "calculation": {
+          "step": 0.1,
+          "offset": 0
+        },
+        "overflow": 0.6,
+        "line_type": "secondary_enthalpy",
+        "overflow_type": "secondary_enthalpy_overflow"
+      }
+    },
+    "comfort": {
+      "main": {
+        "calculation": {
+          "min_t": 21,
+          "max_t": 26,
+          "min_phi": 30,
+          "max_phi": 60,
+          "min_x": 0,
+          "max_x": 12
+        },
+        "overflow": 0,
+        "line_type": "comfort",
+        "overflow_type": "comfort"
+      }
+    }
+  },
+  "line_types": {
+    "comfort": {
+      "color": "green",
+      "width": 1.5
+    },
+    "main_enthalpy": {
+      "color": "black",
+      "width": 0.5
+    },
+    "secondary_enthalpy": {
+      "color": "black",
+      "width": 0
+    },
+    "main_temperature": {
+      "color": "black",
+      "width": 0.5
+    },
+    "secondary_temperature": {
+      "color": "black",
+      "width": 0.25
+    },
+    "main_rel_humidity": {
+      "color": "black",
+      "width": 1
+    },
+    "secondary_rel_humidity": {
+      "color": "black",
+      "width": 0.5
+    },
+    "tertiary_rel_humidity": {
+      "color": "black",
+      "width": 0.25,
+      "dash": "dash"
+    },
+    "secondary_enthalpy_overflow": {
+      "color": "black",
+      "width": 0.5
+    },
+    "invisible": {
+      "width": 0
+    }
+  },
+  "labels": {
+    "enthalpy": {
+      "line_types": ["main"],
+      "round": 0,
+      "offset" : 7,
+      "arguments": {
+        "textangle": 40
+      },
+      "font": {
+        "size": 8
+      }
+    },
+    "temperature": {
+      "line_types": ["main"],
+      "round": 0,
+      "offset" : 0,
+      "arguments": {
+        "textangle": 0
+      },
+      "font": {
+        "size": 8
+      }
+    },
+    "rel_humidity": {
+      "line_types": ["main", "secondary", "tertiary"],
+      "round": 0,
+      "offset" : 0,
+      "arguments": {
+        "textangle": 0
+      },
+      "font": {
+        "size": 8
+      }
+    },
+    "abs_humidity": {
+      "line_types": ["main"],
+      "round": 0,
+      "offset" : 1,
+      "arguments": {
+        "textangle": 0
+      },
+      "font": {
+        "size": 8
+      }
+    }
+  }
+}
